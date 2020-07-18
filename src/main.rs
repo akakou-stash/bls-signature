@@ -5,7 +5,7 @@ mod tests {
     extern crate rand;
     extern crate pairing;
 
-    use pairing::{Engine};
+    use pairing::Engine;
     use group::CurveAffine;
     use ff::Field;
     use pairing::bls12_381::{Bls12, Fr, G1Affine, G2Affine};
@@ -25,7 +25,6 @@ mod tests {
         let lhs = Bls12::pairing(signature, G2Affine::one());
 
         println!("{}", lhs == rhs);
-
         assert_eq!(lhs == rhs, true);
     }
 
